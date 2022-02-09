@@ -13,7 +13,7 @@ def Add(numbers):
     print(numbers)
     for i in numbers:
         if(i<0):
-            count=count+1
+            count=1
             neg.append(i)
     
     if count==0:

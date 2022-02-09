@@ -24,11 +24,9 @@ class Testcal(unittest.TestCase):
         self.assertEqual(result,10)
 
     def test_6_negative(self):
-        result=Add("//;\n-1;2;,3;..4")
         with self.assertRaises(Exception) as context:
             Add("//;\n-1;2;,3;..4")
-        print(context)
-        self.assertTrue('Exception: negatives not allowed -1' in context.exception)
+        self.assertTrue('negatives not allowed -1' in str(context.exception)) 
 
 
 
